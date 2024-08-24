@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Meal Subscription Survey</title>
+</head>
+<body>
+    <header>
+        <h1>Meal Subscription Survey</h1>
+    </header>
+
+    <div class="form-container">
+        <form id="surveyform">
+            <label for="SurveyorId">SurveyorId:</label>
+            <input type="text" id="SurveyorId" name="SurveyorId" placeholder="Enter your SurveyorId" required>
+
+            <label for="subscribe">Would you subscribe to a meal service?</label>
+            <select id="subscribe" name="subscribe" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="age">Age Group:</label>
+            <select id="age" name="age" required>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-60">46-60</option>
+                <option value="60+">60+</option>
+            </select>
+
+            <label for="suburb">Suburb:</label>
+            <input type="text" id="suburb" name="suburb" placeholder="Enter your suburb" required>
+
+            <label for="days">Days per week:</label>
+            <select id="days" name="days" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+
+            <fieldset>
+                <legend>What do you look for in a good subscription service? (Check all that apply)</legend>
+                <label>
+                    <input type="checkbox" name="preferences" value="Food Quality"> Food Quality
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="preferences" value="Delivery"> Delivery
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="preferences" value="Taste"> Taste
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="preferences" value="Cuisine Variety"> Cuisine Variety
+                </label>
+                <br>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    
+    <script src="Formsubmit.js"></script>
+</body>
+</html>
