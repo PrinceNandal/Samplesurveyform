@@ -1,7 +1,7 @@
 document.getElementById('surveyform').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
 
-    // Collect form data
+    
     const formData = new FormData(this);
     const data = {
         SurveyorId: formData.get('SurveyorId'),
@@ -12,12 +12,17 @@ document.getElementById('surveyform').addEventListener('submit', function(event)
         preferences: []
     };
 
-    // Collect checkbox values
+    
     document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
         data.preferences.push(checkbox.value);
     });
 
-    // Send data to the API
+    if (data.preferences.length === 0) {
+        alert('Please select at least one option in the preferences section.');
+        return; 
+    }
+
+    
     fetch('https://formspree.io/f/xovayerb', {
         method: 'POST',
         headers: {
