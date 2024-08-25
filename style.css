@@ -61,6 +61,7 @@ fieldset {
 }
 fieldset label {
     margin-top: 0;
+    font-weight:normal;
 }
 
 legend {
