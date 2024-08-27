@@ -23,7 +23,7 @@ document.getElementById('surveyform').addEventListener('submit', function(event)
     }
 
     
-    fetch('https://formspree.io/f/xovayerb', {
+    fetch('https://q6qej65wl8.execute-api.ap-southeast-2.amazonaws.com/survey', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
